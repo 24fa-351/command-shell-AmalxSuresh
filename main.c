@@ -8,8 +8,6 @@
 #include "parse.c"
 
 #define MAX_LEN 1000
-#define MAX_ARGS 100
-#define MAX_ENV_VARS 100
 
 // Main shell loop
 int main(int argc, char argv[]) {
@@ -21,7 +19,6 @@ int main(int argc, char argv[]) {
         if(!strcmp(line, "exit\n")) {
             break;
         }
-        //printf("You entered: %s", line);
 
         // Split command line into tokens and execute
         parse_and_execute(line);

@@ -7,6 +7,7 @@
 #include <ctype.h>
 #include <fcntl.h>
 
+//functions for builtin commands
 void set_env_var(char *name, char *value);
 void unset_env_var(char *name);
 void echo_with_expansion(char *line);
@@ -31,6 +32,7 @@ void change_directory(char *name) {
         }
     }
 }
+
 void print_directory() {
     char cwd[1000];
     if(getcwd(cwd, sizeof(cwd)) != NULL) {
